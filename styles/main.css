@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&family=Ruthie&display=swap');
+/* LINK RULES */
+a {
+  background-image: linear-gradient(
+    to right,
+    #54b3d6,
+    #54b3d6 50%,
+    #f3efef 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+a:before{
+    content: '';
+    background: #54b3d6;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  a:hover {
+   background-position: 0;
+  }
+  
+  a:hover::before{
+    width: 100%;
+  }
+
+/* MAIN RULES */
+body {
+    background-image: url("../assets/blue-lake.jpg");
+    background-size: cover;
+    
+  }
+
+
+  h1 {
+    font-family:"Ruthie", Arial, Helvetica, sans-serif;
+    color: rgb(209, 221, 232);
+    font-size: 32px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 32px;
+    color: rgb(15, 20, 26) ;
+  }
+
+/* ANIMATED TEXT RULES */
+svg {
+	font-family: "Ruthie", sans-serif;
+	width: 100%; height: 100%;
+}
+svg text {
+	animation: stroke 9s infinite alternate;
+	stroke-width: 1;
+	stroke: #15F5D9;
+	font-size: 42px;
+}
+@keyframes stroke {
+	0%   {
+		fill: rgba(243,251,251,0); stroke: #85a4b6;
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(243,251,251,0); stroke: rgba(21,245,217,1); }
+	80%  {fill: rgba(243,251,251,0); stroke: rgba(21,245,217,1); stroke-width: 3; }
+	100% {
+		fill: rgba(243,251,251,1); stroke: rgba(21,245,217,0);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
